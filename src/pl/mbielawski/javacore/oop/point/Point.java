@@ -1,15 +1,15 @@
-package pl.mbielawski.javacore.pointclass;
+package pl.mbielawski.javacore.oop.point;
 
 public final class Point {
 
 	private int x, y;
 	
-	Point() {
+	public Point() {
 		this.x = 0;
 		this.y = 0;
 	}
 	
-	Point(int x, int y) {
+	public Point(int x, int y) {
 		this.x = x;
 		this.y = y;
 	}

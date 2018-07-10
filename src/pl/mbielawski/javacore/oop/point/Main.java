@@ -1,4 +1,4 @@
-package pl.mbielawski.javacore.pointclass;
+package pl.mbielawski.javacore.oop.point;
 
 import java.util.*;
 public class Main {
