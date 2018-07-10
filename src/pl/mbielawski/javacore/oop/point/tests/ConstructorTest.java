@@ -5,13 +5,14 @@ import org.junit.Test;
 import pl.mbielawski.javacore.oop.point.Point;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThat;
 
 public class TestJunit {
 	
 	@Test
 	public void testGetters()
 	{
-		point = new Point(12, -10);
+		Point point = new Point(12, -10);
 		
 		assertEquals(point.getX(), 12);
 		assertEquals(point.getY(), -10);
@@ -47,6 +48,14 @@ public class TestJunit {
 	@Test
 	public void testImmutability()
 	{
-		@TODO
+		Point point = new Point(3,4);
+		Point point1;
+		
+		assertThat(point.hashCode() != point.scale(0).hashCode());
+		assertThat(point.hashCode() != point.translate(1, 2).hashCode());
+		
+		point1 = point.scale(39).translate(43,-21);
+		
+		assertThat(point.hashCode() != point1.hashCode());
 	}
 }
